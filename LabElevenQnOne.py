@@ -25,8 +25,12 @@ class calculator:
 
     # function to divide x and y
     def divider(self):
-        z = int(self.x) / int(self.y)
-        print("The quotient of", self.x, "and", self.y, "is", z)
+        try:
+            z = int(self.x) / int(self.y)
+            print("The quotient of", self.x, "and", self.y, "is", z)
+        # handle zero division exception
+        except ZeroDivisionError:
+            print("Divisor cannot be zero")
 
     # function to set x and y to zero
     def clear(self):
@@ -39,8 +43,8 @@ class calculator:
 
 def main():
     # get user to input 2 numbers
-    x = input("Enter first number: ")
-    y = input("Enter second number: ")
+    x = int(input("Enter first number: "))
+    y = int(input("Enter second number: "))
 
     # create calculator object
     result = calculator(x, y)

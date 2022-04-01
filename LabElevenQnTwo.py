@@ -31,16 +31,31 @@ class clockTime:
         print("Time:", self.hours, ":", self.minutes, ":", self.seconds)
 
 
+
+
 def main():
     # user input of hours, minutes and seconds value
-    hours = input("Enter hours value: ")
-    minutes = input("Enter minutes value: ")
-    seconds = input("Enter seconds value: ")
+    hours = int(input("Enter hours value: "))
+    # validate input range
+    while hours < 0 or hours > 23:
+        hours = int(input("Enter hours value (range from 0 - 24): "))
+
+    minutes = int(input("Enter minutes value: "))
+    # validate input range
+    while minutes < 0 or minutes > 59:
+        minutes = int(input("Enter minutes value (range from 0 - 59): "))
+
+    seconds = int(input("Enter seconds value: "))
+    # validate input range
+    while seconds < 0 or seconds > 59:
+        seconds = int(input("Enter seconds value (range from 0 - 59): "))
+
     # create a clockTime object
     ct = clockTime()
     # set time based on user input
     ct.setTime(hours, minutes, seconds)
     # display time
     ct.showTime()
+
 
 main()
