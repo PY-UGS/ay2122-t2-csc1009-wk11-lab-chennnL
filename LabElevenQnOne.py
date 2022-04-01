@@ -41,6 +41,7 @@ class calculator:
         print("The first number is:", x)
         print("The second number is:", y)
 
+
 def main():
     # get user to input 2 numbers
     x = int(input("Enter first number: "))
@@ -54,6 +55,7 @@ def main():
     result.multiplier()
     result.divider()
     result.clear()
+
 
 main()
 

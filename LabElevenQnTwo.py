@@ -31,8 +31,6 @@ class clockTime:
         print("Time:", self.hours, ":", self.minutes, ":", self.seconds)
 
 
-
-
 def main():
     # user input of hours, minutes and seconds value
     hours = int(input("Enter hours value: "))
